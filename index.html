@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chúc Mừng Ngày 20/10</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            overflow: hidden;
+            padding: 20px;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            max-width: 450px;
+            width: 100%;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .gif-container img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            border: 4px solid #ff9a9e;
+        }
+        h1 {
+            color: #d63384;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .btn {
+            background-color: #d63384;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        .btn:hover {
+            background-color: #b02a63;
+            transform: scale(1.05);
+        }
+        #hiddenMessage {
+            display: none;
+            margin-top: 15px;
+            color: #d63384;
+            font-weight: bold;
+            animation: bounce 0.8s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <!-- Chèn link ảnh động (GIF) vào đây -->
+        <div class="gif-container">
+            <img src="https://giphy.com" alt="Hoa động">
+        </div>
+        <h1>Chúc Mừng Ngày 20/10!</h1>
+        <p>Chúc một nửa thế giới luôn xinh đẹp, rạng rỡ và luôn gặp nhiều niềm vui trong cuộc sống này. Cảm ơn vì tất cả những điều tuyệt vời nhất!</p>
+        
+        <button class="btn" onclick="showMessage()">Nhấn vào đây nhận bất ngờ ❤️</button>
+        <div id="hiddenMessage">Chúc bạn ngày nào cũng là 20/10 thật hạnh phúc và yêu thương! ✨</div>
+    </div>
+
+    <script>
+        function showMessage() {
+            const msg = document.getElementById('hiddenMessage');
+            msg.style.display = 'block';
+            alert('Chúc bạn 20/10 vui vẻ nhé!');
+        }
+    </script>
+
+</body>
+</html>
